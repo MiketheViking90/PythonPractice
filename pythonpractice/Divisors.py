@@ -1,6 +1,6 @@
 import math
 
-def getDivisors(n):
+def get_divisors(n):
     sqrt = int(math.sqrt(n))
     divs = []
     for x in range(2, sqrt, 1):
@@ -10,5 +10,5 @@ def getDivisors(n):
     divs.sort()
     return divs
 
-divs = getDivisors(240)
+divs = get_divisors(240)
 print(*divs, sep=",")
