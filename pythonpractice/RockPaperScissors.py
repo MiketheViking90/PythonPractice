@@ -7,12 +7,10 @@ def playGame(n):
     while (not endGame and w1 < n and w2 < n):
         in1 = input("p1? ")
         if (in1 == "quit"):
-            endGame = True
-            break
+            return
         in2 = input("p2? ")
         if (in2 == "quit"):
-            endGame = True
-            break
+            return
 
         in1 = Hand(in1)
         in2 = Hand(in2)
@@ -26,7 +24,6 @@ def playGame(n):
         print ("P2 Wins!")
 
 def playRound(in1, in2):
-    endGame = False;
     comp = getWinner(in1, in2)
     if (comp == 0):
         return in1.getName() + " tie!"
